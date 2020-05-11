@@ -8,54 +8,81 @@ You will find this is far easier than the opposite task of using CSS to cram you
 */
 /* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
-
 /* Start your base/mobile styles here */
 * {
     box-sizing: border-box;
 }
 
-html, body {
+body,
+html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 5px;
+    margin   : 0 auto;
+    padding  : 5px;
 }
 
 #Accessible {
-    display: flex;
+    display  : flex;
     flex-flow: row wrap;
 }
 
 .station {
-    padding: 5px;
-    float: left;
+    padding   : 5px;
+    float     : left;
     min-height: 185px;
     text-align: center;
-    flex: 1 0 34%;
-    display: none;
+    flex      : 1 0 34%;
+    display   : none;
 }
 
 .station.active {
     display: block;
 }
 
+.end,
+.start {
+    display: none;
+}
+
+.end.active,
+.start.active {
+    display: block;
+}
+
+#result {
+    display: none;
+}
+
+#result img {
+    display  : none;
+    max-width: 200px;
+}
+
+#result.accessible,
+#result.non-accessible {
+    display: block;
+}
+
+#result.accessible img.accessible,
+#result.non-accessible img.non-accessible {
+    display: block;
+}
+
 img {
     display: block;
-    width: 50%;
+    width  : 50%;
 }
 
 select {
     display: block;
-    width: 100%;
+    width  : 100%;
 }
-
 /* Tablet/Desktop overrides */
 @media(min-width: 681px) {
-
     /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
     .item {
         flex-basis: 50%;
@@ -65,7 +92,6 @@ select {
         width: 33%;
     }
 }
-
 @media(min-width: 729px) {
     /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
 }
