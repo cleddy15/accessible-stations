@@ -4,4 +4,11 @@ $("body").on("change", ".filter", function (e) {
 
 	$(".station.active").removeClass("active");
 	$(`.station.${choice}`).addClass('active');
+
 });
+
+
+
+if (station == accessible) {
+	$(".")
+}
